@@ -16,7 +16,7 @@ import { Vm } from "./Vm.sol";
 */
 
 /// @notice Modern collection of testing assertions and logging utilities.
-/// @author Paul Razvan Berg
+/// @author Rust-SolMan
 /// @dev Inspired by DSTest.
 contract PRBTest {
     /*//////////////////////////////////////////////////////////////////////////

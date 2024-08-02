@@ -1,13 +1,4 @@
-# PRBTest [![Github Actions][gha-badge]][gha] [![Coverage][codecov-badge]][codecov] [![Foundry][foundry-badge]][foundry] [![License: MIT][license-badge]][license]
-
-[gha]: https://github.com/PaulRBerg/prb-test/actions
-[gha-badge]: https://github.com/PaulRBerg/prb-test/actions/workflows/ci.yml/badge.svg
-[codecov]: https://codecov.io/gh/PaulRBerg/prb-test
-[codecov-badge]: https://codecov.io/gh/PaulRBerg/prb-test/branch/main/graph/badge.svg?token=T46OSU33QB
-[foundry]: https://getfoundry.sh/
-[foundry-badge]: https://img.shields.io/badge/Built%20with-Foundry-FFDB1C.svg
-[license]: https://opensource.org/licenses/MIT
-[license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
+# PRBTest
 
 PRBTest is a modern collection of testing assertions and logging utilities for Solidity, and is meant to be a drop-in
 replacement for DSTest.
@@ -24,8 +15,8 @@ replacement for DSTest.
 
 ### Template
 
-If you're starting a project from scratch, the easiest way to install PRBTest is to use my [Foundry
-template][my-foundry-template], since it comes pre-configured with PRBTest.
+If you're starting a project from scratch, the easiest way to install PRBTest is to use Foundry
+template, since it comes pre-configured with PRBTest.
 
 ### Node.js
 
@@ -50,7 +41,7 @@ This installation method is not recommended, but it is available for those who p
 First, install the submodule using Forge:
 
 ```shell
-forge install --no-commit PaulRBerg/prb-test@release-v0
+forge install --no-commit rust-solman/prb-test@release-v0
 ```
 
 Your `.gitmodules` file should now contain the following entry:
@@ -59,7 +50,7 @@ Your `.gitmodules` file should now contain the following entry:
 [submodule "lib/prb-test"]
   branch = "release-v0"
   path = "lib/prb-test"
-  url = "https://github.com/PaulRBerg/prb-test"
+  url = "https://github.com/rust-solman/prb-test"
 ```
 
 Finally, add this to your `remappings.txt` file:
@@ -151,10 +142,7 @@ DSTest doesn't version its releases, which makes it difficult to future-proof co
 accidentally update your git submodules and thus break your test suites. For
 [some users](https://github.com/dapphub/ds-test/issues/32), this is a real pain.
 
-PRBTest is versioned via tags and branches and all changes are tracked in a [CHANGELOG](./CHANGELOG.md) file. I maintain
-redundant branches for each release because git submodules
-[don't support tags](https://stackoverflow.com/q/1777854/3873510).
-
+PRBTest is versioned via tags and branches and all changes are tracked in a CHANGELOG file.
 I will strive to follow the [semver](https://semver.org/) versioning scheme, though I won't do this before the v1.0
 release, and it might not always be feasible.
 
@@ -187,8 +175,8 @@ For more details about this, see this discussion [here](https://github.com/dapph
 
 ## Contributing
 
-Feel free to dive in! [Open](https://github.com/PaulRBerg/prb-test/issues/new) an issue,
-[start](https://github.com/PaulRBerg/prb-test/discussions/new) a discussion or submit a PR.
+Feel free to dive in! [Open](https://github.com/rust-solman/prb-test/issues/new) an issue,
+[start](https://github.com/rust-solman/prb-test/discussions/new) a discussion or submit a PR.
 
 ### Pre Requisites
 
@@ -206,7 +194,7 @@ In addition, familiarity with [Solidity](https://soliditylang.org/) is requisite
 Clone this repository including submodules:
 
 ```sh
-$ git clone --recurse-submodules -j8 git@github.com:PaulRBerg/prb-test.git
+$ git clone --recurse-submodules -j8 git@github.com:rust-solman/prb-test.git
 ```
 
 Then, inside the project's directory, run this to install the Node.js dependencies:
@@ -233,12 +221,3 @@ These contracts were inspired by or directly modified from the following sources
 ## License
 
 This project is licensed under MIT.
-
-<!-- Links -->
-
-[ds-test]: https://github.com/dapphub/ds-test
-[ds-test-plus]:
-  https://github.com/Rari-Capital/solmate/blob/03e425421b24c4f75e4a3209b019b367847b7708/src/test/utils/DSTestPlus.sol
-[forge-std]: https://github.com/foundry-rs/forge-std
-[forge-std-test]: https://github.com/foundry-rs/forge-std/blob/c19dfd2f2a88a461216b0dd1f4961e1a85dcad46/src/Test.sol
-[my-foundry-template]: https://github.com/paulrberg/foundry-template

@@ -132,7 +132,6 @@ function containsUint256(uint256[] memory a, uint256 b) pure returns (bool resul
 /// @dev Calculates the absolute delta between `a` and `b`.
 function delta(int256 a, int256 b) pure returns (uint256 result) {
     // If XOR of a and b is greater than -1, a and b have the same sign. This works due to two's complement.
-    // See https://twitter.com/PaulRBerg/status/1546957951579062272.
     if ((a ^ b) > -1) {
         result = delta(abs(a), abs(b));
     } else {
